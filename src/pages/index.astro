@@ -1,0 +1,40 @@
+---
+import { HeroSlider1, HeroSlider3 } from "@static/images";
+import Layout from "../layouts/Layout.astro";
+import { Hero } from "@modules/Hero";
+---
+
+<Layout
+    title="Wheat | Homepage"
+    description="YOUR META DESCRIPTION FOR SEO"
+>
+    <main class="page-content">
+        <Hero
+            client:load
+            heroType="fullPageSlider"
+            data={[
+                {
+                    subtitle: "Asociación",
+                    title: "Wheat Music",
+                    background: HeroSlider1.src,
+                    paragraph:
+                        "Wheat Music es una comunidad dinámica comprometida con la promoción y difusión de la música electrónica. Fomentamos la creatividad y el talento a través de eventos, talleres y colaboraciones, creando un espacio inclusivo para artistas, productores y aficionados. Únete a nosotros y sé parte de una revolución sonora donde la innovación y la pasión por la música electrónica se unen.",
+                    button: {
+                        text: "Ir a wheat Music",
+                        link: "#",
+                    },
+                },
+                {
+                    subtitle: "Vive la música",
+                    title: "Proximos eventos",
+                    background: HeroSlider3.src,
+                    paragraph: "",
+                    button: {
+                        text: "Ir a proximos eventos",
+                        link: "/#",
+                    },
+                },
+            ]}
+        />
+    </main>
+</Layout>
